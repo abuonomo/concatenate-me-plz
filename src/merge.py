@@ -32,9 +32,14 @@ def main(input_dir: Path, outfile: Path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Merge csv files.")
-    parser.add_argument("--indir", help="input data dir", type=Path, default=EXP_DIR)
     parser.add_argument(
-        "--outfile", help="output merged file", type=Path, default=OUTFILE
+        "--indir",
+        help="input data dir where the csvs you want to concatenate live.",
+        type=Path,
+        default=EXP_DIR,
+    )
+    parser.add_argument(
+        "--outfile", help="output concatenated total csv", type=Path, default=OUTFILE
     )
     args = parser.parse_args()
     main(args.indir, args.outfile)

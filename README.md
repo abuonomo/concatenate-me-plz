@@ -3,7 +3,7 @@
 A script for concatenating data from multiple csv files in a given directory. The script will retain the headers and repeat them on every other row of the output contentated file. This is an oddity which is needed for downstream processing.
 
 ## Usage
-You will need to place the directory with the csvs you want to concatenate into the `data` directory with the title `All_subjects_spreadsheets`.
+You will need to place the directory with the csvs you want to concatenate into the `data` directory with the title `All_subjects_spreadsheets` so that you have: `<project root>/data/All_subjects_spreadsheets`.
 
 While in the root of this repository, run the following command:
 ```bash
