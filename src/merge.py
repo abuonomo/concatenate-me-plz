@@ -17,8 +17,7 @@ OUTFILE = DATA_DIR / "concatenated.csv"
 def main(input_dir: Path, outfile: Path):
     LOG.info(f"Loading from: {input_dir}")
     dfs = []
-    for file in (pbar := tqdm(list(input_dir.iterdir()))):
-        pbar.set_description(f"Loading {file.name}")
+    for file in tqdm(list(input_dir.iterdir())):
         if file.suffix == ".csv":
             df = pd.read_csv(file, header=None)
             # ^ header=None to avoid pandas inferring header from first row
